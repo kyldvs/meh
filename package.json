@@ -1,0 +1,28 @@
+{
+  "name": "jsphysics",
+  "description": "javascript physics engine",
+  "private": true,
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "github.com/kyldvs/jsphysics"
+  },
+  "dependencies": {
+    "react": "~0.11.2",
+    "commoner": "git://github.com/kyldvs/commoner.git",
+    "express": "~4.10.6",
+    "react-tools": "~0.12.2"
+  },
+  "jest": {
+    "rootDir": "",
+    "scriptPreprocessor": "jest/preprocessor.js",
+    "modulePathIgnorePatterns": [
+      "/build/",
+      "/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "/build/",
+      "/node_modules/"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+#! /bin/bash -e
+
+# directory this script is located in
+SCRIPTS=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+# some convenient aliases
+ROOT="$SCRIPTS/.."
+BUILD="$ROOT/build"
+
+# start the server
+/usr/bin/env node "$BUILD/Server.js"

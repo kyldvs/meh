@@ -1,0 +1,10 @@
+{
+  "esnext": true,
+  "browser": true,
+  "globalstrict": true,
+  "jasmine": true,
+  "node": true,
+  "predef": [
+    "jest"
+  ]
+}

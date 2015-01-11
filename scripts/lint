@@ -1,0 +1,10 @@
+#! /bin/bash -e
+
+# directory this script is located in
+SCRIPTS=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+# some convenient aliases
+ROOT="$SCRIPTS/.."
+
+# lint the source code
+jshint "$ROOT/src"

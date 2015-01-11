@@ -1,0 +1,12 @@
+#! /bin/bash -e
+
+# directory this script is located in
+SCRIPTS=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+# some convenient aliases
+COMMONER="$SCRIPTS/commoner"
+ROOT="$SCRIPTS/.."
+BUILD="$ROOT/build"
+
+# for now build everything into the build directory
+/usr/bin/env node "$COMMONER" --relativize --use-provides-module "$ROOT/src" "$BUILD"
