@@ -8,5 +8,11 @@ COMMONER="$SCRIPTS/commoner"
 ROOT="$SCRIPTS/.."
 BUILD="$ROOT/build"
 
-# for now build everything into the build directory
+# relativize everything using commoner
 /usr/bin/env node "$COMMONER" --relativize --use-provides-module "$ROOT/src" "$BUILD"
+
+# build js
+webpack "$BUILD/Client.js" "$ROOT/static/bundle.js"
+
+# build html
+cp "$ROOT/src/front/html/index.html" "$ROOT/static/index.html"

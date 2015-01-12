@@ -8,8 +8,6 @@ require('commoner')
   .resolve(
     function(id) {
       return context.getProvidedP().then(function(idToPath) {
-        // If a module declares its own identifier using @providesModule
-        // then that identifier will be a key in the idToPath object.
         if (idToPath.hasOwnProperty(id)) {
           return context.readFileP(idToPath[id]);
         }
@@ -19,5 +17,5 @@ require('commoner')
       return this.readModuleP(id);
     }
   ).process(function(id, source) {
-    return ReactTools.transform(source, {harmony: true});
+    return ReactTools.transform(source, {harmony: true, stripTypes: true});
   });
